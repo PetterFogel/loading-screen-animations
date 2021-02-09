@@ -6,13 +6,16 @@
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* Main page content */
 
 .hero-container {
-    height: 100vh;
-    width: 100%;
+    height: inherit;
+    width: inherit;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./assets/hero-bg.jpg");
     background-position: center;
     background-size: cover;
@@ -24,4 +27,29 @@ body {
 .hero-title {
     color: #fff;
     font-size: 4rem;
+}
+
+/* Prelude content */
+.prelude-container {
+    background: #111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prelude-title {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    animation: fade 2000ms ease;
+}
+
+@keyframes fade{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
