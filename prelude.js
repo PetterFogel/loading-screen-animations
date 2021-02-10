@@ -1,8 +1,6 @@
 function prelude() {
-    const preludeTitle = document.querySelector(".prelude-title");
-
-    const sentence = preludeTitle.textContent.split("");
-    for (let letter of sentence) {
-        console.log(letter);
+    const preludeTitle = document.querySelectorAll(".prelude-container span");
+    for (let letter of preludeTitle) {
+        letter.classList.add("fade");
     }
 }
