@@ -1,6 +1,25 @@
 function prelude() {
-    const preludeTitle = document.querySelectorAll(".prelude-container span");
-    for (let letter of preludeTitle) {
-        letter.classList.add("fade");
+    startPreludeTitleWithInterval();
+}
+
+function startPreludeTitleWithInterval() {
+    setTimeout(() => {
+        setInterval(fetchPreludeTitle, 50);
+    }, 1500);
+}
+
+function fetchPreludeTitle() {
+    const preludeTitle = document.querySelectorAll(".prelude-container span");  
+    setClassToLetter(preludeTitle);
+}
+
+function setClassToLetter(preludeTitle) {
+    for (let i = 0; i < preludeTitle.length; i++) {
+        
+        if (preludeTitle[i].classList.contains("fade")) {
+            preludeTitle[i].classList.remove("fade");
+            preludeTitle[i].classList.add("fill");
+            break;
+        }
     }
 }
