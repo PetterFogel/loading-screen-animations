@@ -56,3 +56,8 @@ body {
     opacity: 1;
     transition: all 300ms ease;
 }
+
+.slide-right {
+    transform: translateX(100%);
+    transition: all 900ms ease-out;
+}
