@@ -4,8 +4,8 @@ function prelude() {
 
 function startPreludeTitleWithInterval() {
     setTimeout(() => {
-        setInterval(fetchPreludeTitle, 50);
-    }, 1500);
+        setInterval(fetchPreludeTitle, 60);
+    }, 2000);
 }
 
 function fetchPreludeTitle() {
